@@ -17,7 +17,7 @@ public class Assignment {
 
     public static void sumMatrix(int matrix[][]) {
         int row = 1, sum = 0;
-        int col = matrix[1].length;
+        int col = matrix[0].length;
         for (int i = 0; i < col; i++) {
             sum += matrix[row][i];
         }
