@@ -18,5 +18,8 @@ public class StringDemo {
         String fullName = firstName + lastName;
         printLattters(fullName);
 
+        String str = "Apnacollage".replace("l", "");
+        System.out.println(str);
+
     }
 }
