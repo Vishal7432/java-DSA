@@ -42,10 +42,23 @@ public class EvenOdd {
         return n | BitMask;
     }
 
+    public static int clearIthbit(int n, int i) {
+        int BitMask = (~0) << i;
+        return n & BitMask;
+    }
+
+    public static int clearIthbitRange(int n, int i, int j) {
+        int a = ((~0) << (j + 1));
+        int b = (1 << i) - 1;
+        int BitMask = a | b;
+        return n & BitMask;
+    }
+
+
     public static void main(String[] args) {
         // oddOrEven(3);
         // oddOrEven(8);
         // oddOrEven(9);
-        System.out.println(updateIthBit(10, 2, 1));
+        System.out.println(clearIthbitRange(10, 2, 4));
     }
 }
