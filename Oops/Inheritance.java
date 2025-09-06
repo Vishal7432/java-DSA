@@ -2,10 +2,11 @@ package Oops;
 
 public class Inheritance {
     public static void main(String[] args) {
-        dog dobby = new dog();
-        dobby.eat();
-        dobby.legs = 4;
-        System.out.println(dobby.legs);
+        Fish f = new Fish();
+        f.eat();
+        f.breathe();
+        f.swin();
+        // System.out.println(f);
     }
 }
 
