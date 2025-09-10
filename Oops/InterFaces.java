@@ -6,6 +6,8 @@ public class InterFaces {
         obj.move();
 
         Bear b = new Bear();
+        b.eatVeg();
+        b.eatNonVeg();
         b.omnivore();
     }
 }
@@ -34,16 +36,27 @@ class King implements ChessPlay {
 
 // multiple Inheritance !
 interface Herbivore {
-    eatVeg();
+    void eatVeg();
 
 }
 
 interface Carnivore {
-    eatNonVeg();
+    void eatNonVeg();
 }
 
 class Bear implements Herbivore, Carnivore {
+
+    @Override
+    public void eatVeg() {
+        System.out.println("beaer eat grass and fruits");
+    }
+
+    @Override
+    public void eatNonVeg() {
+        System.out.println("Beer eat meat");
+    }
+
     public void omnivore() {
-        System.out.println("Eat meat and grass both");
+        System.out.println("Beer is an omnivore (eat veg and non-veg)");
     }
 }
