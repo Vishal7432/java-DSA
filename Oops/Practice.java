@@ -17,6 +17,13 @@ public class Practice {
         Student s = new Student();
         s.name = "Amit";
 
+        // Ans -5
+        Vehicle obj1 = new Car(); // function Overriding
+        obj1.print();
+
+        Vehicle obj2 = new Vehicle();
+        obj2.print();
+
     }
 }
 // Question 1
@@ -35,4 +42,18 @@ class Student extends Person {
     int rollNumber;
     String SchoolName;
 
+}
+
+// Question -5
+
+class Vehicle {
+    void print() {
+        System.out.println("Base class(Vehicle)!");
+    }
+}
+
+class Car extends Vehicle {
+    void print() {
+        System.out.println("Derived class (Car)");
+    }
 }
