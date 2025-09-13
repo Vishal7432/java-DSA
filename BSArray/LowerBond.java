@@ -11,27 +11,38 @@ public class LowerBond {
 
     // If no such index is found, return the size of the array.
 
-    public static int lowerBound(int arr[], int target) {
-        int n = arr.length;
-        int start = 0, end = n - 1;
-        int ans = 0;
+    public static int lowerBound(int[] arr, int n, int x) {
+        for (int i = 0; i < n; i++) {
+            if (arr[i] >= x) {
+                // lower bound found:
+                return i;
+            }
+        }
+        return n;
+    }
 
-        while (start <= end) {
-            int mid = start + end / 2;
-            if (arr[mid] >= target) {
+    public static int Optimal(int[] arr, int n, int x) {
+        int low = 0, high = n - 1;
+        int ans = n;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            // maybe an answer
+            if (arr[mid] > x) {
                 ans = mid;
-                end = mid - 1;
+                // look for smaller index on the left
+                high = mid - 1;
             } else {
-                start = mid + 1;
+                low = mid + 1; // look on the right
             }
         }
         return ans;
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 2, 3, 3, 5, 6, 8, 8, 10, 11 };
-        int target = 9;
-        int index = lowerBound(arr, target);
-        System.out.println("The lower bound is index : " + index);
+        int[] arr = { 3, 5, 8, 15, 19 };
+        int n = 5, x = 4;
+        int ind = Optimal(arr, n, x);
+        System.out.println("The lower bound is the index: " + ind);
     }
 }
