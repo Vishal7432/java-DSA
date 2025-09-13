@@ -1,4 +1,4 @@
-package Oops;
+
 
 public class SortedArray {
     public static boolean isSorted(int arr[], int i) {

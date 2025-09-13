@@ -1,4 +1,4 @@
-package Oops;
+
 
 public class FisrtOccurs {
 
