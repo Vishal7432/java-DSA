@@ -34,7 +34,7 @@ public class FisrtOccurs {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 4, 2, 8, 3, 5, 7, 9, 5, 10, 11 };
+        int arr[] = { 4, 2, 8, 3, 5, 7, 9, 5, 10, 5 };
         int key = 5;
         System.out.println(lastOccurence(arr, key, 0));
     }
