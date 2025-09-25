@@ -10,9 +10,18 @@ public class StringFun {
         return subStr;
     }
 
+    public static void ptint(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            System.out.println(str.charAt(i) + " ");
+        }
+        System.out.println(str.length());
+
+    }
+
     public static void main(String[] args) {
-        String str = "HelloWorld";
-        System.out.println(str.substring(0, 5));
+        String str = "1.4";
+        ptint(str);
+        // System.out.println(str.substring(0, 5));
         // System.out.println(printString(str, 3, 5));
     }
 }
