@@ -35,5 +35,5 @@ public class DigitsAreEqual {
 // '8' 56
 // '9' 57
 
-// So agar tum '3' - '0' karte ho → 51 - 48 = 3 😃
-// 👉 matlab character '3' number 3 ban gaya.
+// So agar tum '3' - '0' karte ho → 51 - 48 = 3 
+//  matlab character '3' number 3 ban gaya.

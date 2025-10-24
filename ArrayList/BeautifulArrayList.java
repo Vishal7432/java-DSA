@@ -1,7 +1,5 @@
-package LinkList;
-
-public class Practice {
+public class BeautifulArrayList {
     public static void main(String[] args) {
-
+        
     }
 }
