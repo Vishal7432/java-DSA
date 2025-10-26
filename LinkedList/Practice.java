@@ -152,6 +152,27 @@ public class Practice {
 
     }
 
+    // Search Recursively key in LinkrdList
+    public int helper(Node head, int key) {
+        if (head == null) {
+            return -1;
+        }
+
+        if (head.data == key) {
+            return 0;
+        }
+
+        int idx = helper(head.next, key);
+        if (idx == -1) {
+            return -1;
+        }
+        return idx + 1;
+    }
+
+    public int recSearch(int key) {
+        return helper(head, key);
+    }
+
     public static void main(String[] args) {
         Practice ll = new Practice(); // create your own linked list
 
@@ -173,7 +194,7 @@ public class Practice {
         // ll.print();
         // System.out.println(size);
 
-        System.out.println(ll.findKey(3));
-        System.out.println(ll.findKey(10));
+        System.out.println(ll.recSearch(3));
+        System.out.println(ll.recSearch(10));
     }
 }
