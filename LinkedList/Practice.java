@@ -1,7 +1,5 @@
 package LinkedList;
 
-import BSArray.floorAndCeil;
-
 public class Practice {
     public class Node {
         int data;
@@ -169,7 +167,14 @@ public class Practice {
         return idx + 1;
     }
 
+    // helper() function ko do cheez chahiye hoti hain:
+    // Node head — jahan se search start karna hai
+    // int key — kya dhoondhna hai
+    // Lekin jab tum main() function me call karoge,
+    // tum sirf key doge (kyunki tumhe list ka head nahi pata hota).
+
     public int recSearch(int key) {
+        // directly helper() ko call karta hai aur head pass karta hai
         return helper(head, key);
     }
 
