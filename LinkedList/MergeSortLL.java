@@ -123,10 +123,10 @@ public class MergeSortLL {
         MergeSortLL ll = new MergeSortLL();
 
         ll.addFirst(1);
-        ll.addFirst(2);
-        ll.addFirst(3);
+        ll.addFirst(7);
+        ll.addFirst(6);
         ll.addFirst(4);
-        // ll.addFirst(5);
+        ll.addFirst(5);
 
         // 5->4->3->2->1
         ll.print();

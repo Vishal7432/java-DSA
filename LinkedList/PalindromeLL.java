@@ -122,7 +122,7 @@ public class PalindromeLL {
 
         // Step 3 Check left half and rigth half equals
 
-        while (right != null) {
+        while (right != null && lelf != null) {
             if (lelf.data != right.data) {
                 return false;
             }

@@ -1,7 +1,4 @@
-// package LinkedList;
-
-public class RemoveNthnode {
-
+public class DeleteNNode {
     public class Node {
         int data;
         Node next;
@@ -16,6 +13,9 @@ public class RemoveNthnode {
     public static Node tail;
     public static int size;
 
+    // Method
+
+    // Add LinkedList node in First
     public void addFirst(int data) {
         // step 1 = create new node
         Node newNode = new Node(data);
@@ -62,68 +62,48 @@ public class RemoveNthnode {
         System.out.println("null");
     }
 
-    // Add LinkedList in Middle any where
+    public static void deleteNAfterM(int N, int M) {
+        Node curr = head;
 
-    public void add(int idx, int data) {
-        if (idx == 0) {
-            addFirst(data);
-            return;
+        while (curr != null) {
+            // Step 1: Skip M nodes
+            for (int i = 1; i < M && curr != null; i++) {
+                curr = curr.next;
+            }
+
+            if (curr == null)
+                return; // reached end
+
+            // Step 2: Delete next N nodes
+            Node temp = curr.next;
+            for (int i = 1; i <= N && temp != null; i++) {
+                temp = temp.next;
+            }
+
+            // Step 3: Connect current node to next of deleted part
+            curr.next = temp;
+
+            // Step 4: Move current pointer forward
+            curr = temp;
+
         }
-        Node newNode = new Node(data);
-        size++;
-        Node temp = head;
-        int i = 0;
-
-        while (i < idx - 1) {
-            temp = temp.next;
-            i++;
-        }
-
-        // i == idx-1; temp -> prev.
-        newNode.next = temp.next;
-        temp.next = newNode;
-    }
-
-    // Find And Remove Nth Node from LinkedList end
-
-    public void deleteNthFromEnd(int n) {
-        // calculate Size
-        int sz = 0;
-        Node temp = head;
-        while (temp != null) {
-            temp = temp.next;
-            sz++;
-        }
-
-        if (n == sz) {
-            head = head.next; // Remove First
-            return;
-        }
-
-        // sz - n
-        int i = 1;
-        int iToFind = sz - n;
-        Node prev = head;
-        while (i < iToFind) {
-            prev = prev.next;
-            i++;
-        }
-
-        prev.next = prev.next.next;
-        return;
     }
 
     public static void main(String[] args) {
-
-        RemoveNthnode ll = new RemoveNthnode();
+        DeleteNNode ll = new DeleteNNode();
+        ll.addLast(1);
         ll.addLast(2);
-        ll.addFirst(1);
+        ll.addLast(3);
         ll.addLast(4);
         ll.addLast(5);
-        ll.add(2, 3);
-        ll.print(); // 1->2->3->4->5
+        ll.addLast(6);
+        ll.addLast(4);
+        ll.addLast(8);
+        ll.addLast(9);
+        int N = 2, M = 2;
+        ll.print();
+        ll.deleteNAfterM(N, M);
 
-        ll.deleteNthFromEnd(5);
         ll.print();
     }
 }
