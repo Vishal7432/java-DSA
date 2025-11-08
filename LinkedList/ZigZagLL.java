@@ -108,7 +108,7 @@ public class ZigZagLL {
         Node left = head;
         Node right = prev;
         Node nextL, nextR;
-        // altrenate merging zig-zag maerge
+        // altrenate merging zig-zag merge
         while (left != null && right != null) {
             nextL = left.next;
             left.next = right;
