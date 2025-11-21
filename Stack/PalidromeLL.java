@@ -7,6 +7,7 @@ public class PalidromeLL {
 
     public static boolean isPalidrome(LinkedList<Character> ll) {
         Stack<Character> ch = new Stack<>();
+        
     }
 
     public static void main(String[] args) {
