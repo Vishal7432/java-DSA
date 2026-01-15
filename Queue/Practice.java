@@ -35,7 +35,7 @@ public class Practice {
         // Remove function
         public static int remove() {
             if (isEmpty()) {
-                System.out.println("Queue is Empty");
+                System.out.println(" Empty");
                 return -1;
             }
 
@@ -51,7 +51,7 @@ public class Practice {
         // Peek function
         public static int peek() {
             if (isEmpty()) {
-                System.out.println("Queue is Empty");
+                System.out.println("Empty");
                 return -1;
             }
             return arr[0];
