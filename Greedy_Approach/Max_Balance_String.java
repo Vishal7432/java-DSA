@@ -9,7 +9,7 @@ public class Max_Balance_String {
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            // (ch == 'L') ? L++ : R++; // ✅
+            // (ch == 'L') ? L++ : R++; // 
             if (ch == 'L') {
                 L++;
             } else {
