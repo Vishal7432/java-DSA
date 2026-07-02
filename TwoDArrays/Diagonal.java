@@ -19,7 +19,7 @@ public class Diagonal {
             if (i != matrix.length - 1 - i)
                 sum += matrix[i][matrix.length - 1 - i];
         }
-
+        
         return sum;
     }
 
