@@ -25,7 +25,7 @@ public class SquaresofaSortedArray {
         int idx = n - 1;
         int left = 0;
         int right = n - 1;
-        while (left < right) {
+        while (left <= right) {
             int a = arr[left] * arr[left];
             int b = arr[right] * arr[right];
 
